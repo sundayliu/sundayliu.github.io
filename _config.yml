@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-name: Jun Liu's Blog
+name: Sunday Liu's Blog
 markdown: kramdown
 kramdown:
   input: GFM
@@ -25,3 +25,5 @@ kramdown:
   syntax_highlighter: rouge
 highlighter: rouge
 permalink: /blog/:year/:month/:day/:title
+
+author: Sunday Liu
