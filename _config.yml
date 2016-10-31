@@ -13,7 +13,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+
+# gems: [jekyll-paginate, jekyll-coffeescript, jekyll-watch, jekyll-assets]
 name: Sunday Liu's Blog
+description: focus on computer tech such as python,c/c++,web design,machine learning ... 
 markdown: kramdown
 kramdown:
   input: GFM
@@ -28,3 +31,14 @@ permalink: /blog/:year/:month/:day/:title
 
 author: Sunday Liu
 github: https://github.com/sundayliu
+
+baseurl: /
+paginate: 15
+paginate_path: "blog/page:num"
+
+gems:
+  - jekyll-paginate # install the paginate plugin
+  - jekyll-watch
+  - jekyll-assets
+  
+
