@@ -3,24 +3,13 @@ layout: page
 title: Sunday Liu's Articles
 ---
 <h1>{{ page.title }}</h1>
-<ul class="posts">
-
-  {% for post in site.posts limit:5 %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-  {% endfor %}
-    
-</ul>
 
 <!-- this loops through the paginated posts -->
+<ul class="posts">
 {% for post in paginator.posts %}
-    <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-    <p class="author">
-        <time datetime="{{ post.date | date:'%Y-%m-%d' }}">{{ post.date }}</time>
-    </p>
-    <div class="content">
-        {{ post.content }}
-    </div>
+    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
 {% endfor %}
+</ul>
 
 <!-- Pagination links -->
 {% if paginator.total_pages > 1 %}
@@ -31,7 +20,28 @@ title: Sunday Liu's Articles
             <span class="previous">&laquo; Previous</span>
         {% endif %}
         
-        {% for page in (1..paginator.total_pages) %}
+        {% assign start_page = 1 %}
+        {% assign end_page = paginator.total_pages %}
+        {% assign gdelta = paginator.total_pages | minus: paginator.page %}
+        
+        {% if paginator.total_pages <= 5 %}
+            {% assign start_page = 1 %}
+            {% assign end_page = paginator.total_pages %}
+            
+        {% elsif paginator.page <= 2 %}
+            {% assign start_page = 1 %}
+            {% assign end_page = 5 %}
+            
+        {% elsif gdelta < 2 %}
+            {% assign start_page = paginator.total_pages | minus: 4 %}
+            {% assign end_page = paginator.total_pages %}
+            
+        {% else %}
+            {% assign start_page = paginator.page |minus: 2 %}
+            {% assign end_page = paginator.page | plus: 2 %}
+            
+        {% endif %}
+        {% for page in (start_page..end_page) %}
             {% if page == paginator.page %}
                 <em>{{ page }}</em>
             {% elsif page == 1 %}
@@ -46,5 +56,6 @@ title: Sunday Liu's Articles
         {% else %}
             <span class="next">Next &raquo;</span>
         {% endif %}
+
     </div>
 {% endif %}
