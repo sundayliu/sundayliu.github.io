@@ -9,18 +9,23 @@
     </head>
     <body>
         <header>
-            <img src="/assets/images/logo.png" alt="sundayliu's blog logo">
-            <h2>{{ site.description }}</h2>
+            <div class="container">
+                <div class="logo">
+                    <img src="/assets/images/logo.png" alt="sundayliu's blog logo">
+                    <h2>{{ site.description }}</h2>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="/">HOME</a></li>
+                        <li><a href="/articles/">ARTICLES</a></li>
+                        <li><a href="/cv.html">CV</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
-        <nav>
-            <ul>
-                <li><a href="/">HOME</a></li>
-                <li><a href="/articles/">ARTICLES</a></li>
-                <li><a href="/cv.html">CV</a></li>
-            </ul>
-        </nav>
-        <div id="tableContainer">
-            <div id="tableRow">
+        
+        <div class="page-content">
+            <div class="container">
                 <section id="main">
                 {{ content }}
                 </section>

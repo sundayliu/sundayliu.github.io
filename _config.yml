@@ -16,7 +16,7 @@
 
 # gems: [jekyll-paginate, jekyll-coffeescript, jekyll-watch, jekyll-assets]
 name: Sunday Liu's Blog
-description: focus on computer tech such as python,c/c++,web design,machine learning ... 
+description: focus on computer tech such as game engine,machine learning ... 
 markdown: kramdown
 kramdown:
   input: GFM

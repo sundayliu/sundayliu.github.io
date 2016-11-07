@@ -8,7 +8,7 @@ date: 2016-11-04
 
 libhello.map
 
-```Makefile
+```Make
 VERS_1.1 {
     global:test;
     local:*;
@@ -17,7 +17,7 @@ VERS_1.1 {
 
 Android.mk
 
-```Makefile
+```Make
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)

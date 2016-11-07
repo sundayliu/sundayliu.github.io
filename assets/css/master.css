@@ -1,11 +1,52 @@
-body{
-    font-family:sans-serif;
-    font-size:small;
+/**
+ * Reset some basic elements
+ */
+body,h1,h2,h3,h4,h5,h6,
+p,blockquote,pre,hr,
+dl,dd,ol,ul,figure{
+    margin:0;
+    padding:0;
 }
 
+@font-face {
+   font-family: 'Noto Sans SC';
+   src: url(../fonts/notosanssc/v1/NotoSansSC-Regular.woff2) format('woff2'),
+        url(../fonts/notosanssc/v1/NotoSansSC-Regular.woff) format('woff'),
+        url(../fonts/notosanssc/v1/NotoSansSC-Regular.otf) format('opentype');
+}
+
+body{
+    font-family: sans-serif;
+    color:#666666;
+    line-height:1.2;
+    width:100%;
+    min-width: 980px;
+    background: url("../images/bg.png");
+}
+
+.container {
+  width: 960px;
+  margin: auto; 
+}
+
+header {
+  width: 100%;
+  background-color: #60a839;
+  margin-bottom: 20px; }
+
 footer{
-    font-size:90%;
-    text-align:center;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    background-color: #51952c;
+}
+
+article{
+    
+}
+
+article header{
+    background-color:#ffffff
 }
 /*
 body{
