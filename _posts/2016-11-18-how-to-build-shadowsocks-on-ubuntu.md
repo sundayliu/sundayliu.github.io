@@ -15,7 +15,8 @@ pip install shadowsocks
 ### Create Configuration File
 
 Path:/etc/shadowsocks.json
-```json
+
+```Json
 {
     "server":"my_server_ip",
     "server_port":8388,
