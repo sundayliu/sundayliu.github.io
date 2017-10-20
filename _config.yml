@@ -27,7 +27,7 @@ kramdown:
     - smart
   syntax_highlighter: rouge
 highlighter: rouge
-permalink: /articles/:year/:month/:day/:title
+permalink: /articles/:year/:month/:day/:title.html
 
 author: Sunday Liu
 github: https://github.com/sundayliu
