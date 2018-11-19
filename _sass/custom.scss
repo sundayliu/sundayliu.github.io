@@ -1,0 +1,155 @@
+footer.site-footer {
+  p{
+    text-align:center;
+    margin:0px;
+  }
+  hr {
+      margin: 5px 0px;
+      height:2px;
+      background:#666666;
+    }
+}
+
+/**
+ * Site header
+ */
+.site-header {
+  // border-top: 5px solid $grey-color-dark;
+  // border-bottom: 1px solid $grey-color-light;
+  min-height: $spacing-unit * 1.865;
+
+  // Positioning context for the mobile navigation icon
+  position: relative;
+  
+  hr {
+      margin: 5px 0px;
+      height:2px;
+      background:#666666;
+      display:block;
+      clear:both;
+    }
+}
+
+.site-title {
+  float: left;
+  
+    h1 {
+      font-weight: 300;
+      @include relative-font-size(1.625);
+      margin:0;
+      line-height: $base-line-height;
+      letter-spacing: -1px;
+    }
+
+    p {
+      color: #d7cfbe;
+      @include relative-font-size(0.9);
+      font-style:italic;
+    }
+
+  @include media-query($on-palm) {
+    padding-right: 45px;
+  }
+}
+
+.site-nav {
+  position: absolute;
+  top: 9px;
+  right: $spacing-unit / 2;
+  background-color: $background-color;
+  border: 1px solid #353535;
+  border-radius: 5px;
+  text-align: right;
+  line-height: $base-line-height * $base-font-size * 2.25;
+
+  .nav-trigger {
+      display: none;
+  }
+
+  .menu-icon {
+    float: right;
+    width: 36px;
+    height: 26px;
+    line-height: 0;
+    padding-top: 10px;
+    text-align: center;
+
+    > svg path {
+      fill: $grey-color-dark;
+    }
+  }
+
+  label[for="nav-trigger"] {
+    display: block;
+    float: right;
+    width: 36px;
+    height: 36px;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  input ~ .trigger {
+    clear: both;
+    display: none;
+  }
+
+  input:checked ~ .trigger {
+    display: block;
+    padding-bottom: 5px;
+  }
+
+  .page-link {
+    color: #ffcc00;
+    line-height: $base-line-height;
+    display: block;
+    padding: 5px 10px;
+    @include relative-font-size(1.0);
+    font-weight:100;
+
+    // Gaps between nav items, but not on the last one
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+    
+    &:hover{
+        // text-decoration:underline;
+        color: #ffeb9b;
+    }
+    margin-left: 20px;
+  }
+
+  @media screen and (min-width: $on-medium) {
+    position: static;
+    float: right;
+    border: none;
+    background-color: inherit;
+
+    label[for="nav-trigger"] {
+      display: none;
+    }
+
+    .menu-icon {
+      display: none;
+    }
+
+    input ~ .trigger {
+      display: none;
+    }
+
+    input ~ .trigger {
+      display: block;
+    }
+
+    .page-link {
+      display: inline;
+      padding: 0;
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+      
+      
+      margin-left: auto;
+    }
+  }
+}
